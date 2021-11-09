@@ -9,7 +9,7 @@ int flow[arraysize];                //标记从源点到当前节点实际还剩
 int pre[arraysize];                 //标记在这条路径上当前节点的前驱,同时标记该节点是否在队列中
 int n,m;
 queue<int> myqueue;
-int BFS(int src,int des)
+int BFS(int src,int des)     //在给定图和src，des的情况下，找到一条从src到des的路径并记录这个路径上的点，同时保留这条路径上每段中的最小值，是路径可通过的flow
 {
     int i,j;
     while(!myqueue.empty())       //队列清空
